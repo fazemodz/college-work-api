@@ -35,4 +35,9 @@ router.delete("/Delete-order-by-id/:ID", (req, res)=>{
     res.json(err);
   });
 })
+router.get("/Delete-order-by-id", (req, res)=>{
+  res.json({
+    message: "Test"
+  });
+  })
 module.exports = router;
