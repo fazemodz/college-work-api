@@ -27,17 +27,17 @@ router.post("/Add-New-Order", (req, res) => {
         res.json(err);
     })
 
-})
+});
 router.delete("/Delete-order-by-id/:ID", (req, res)=>{
   OrderDB.findByIdAndDelete(req.params.ID).exec().then((orderinfo)=>{
     res.json(orderinfo);
   }).catch((err)=>{
     res.json(err);
   });
-})
+});
 router.get("/Delete-order-by-id", (req, res)=>{
   res.json({
     message: "Test"
   });
-})
+});
 module.exports = router;
