@@ -28,8 +28,8 @@ router.post("/Add-New-Order", (req, res) => {
     })
 
 });
-router.delete("/Delete-order-by-id/:ID", (req, res)=>{
-  OrderDB.findByIdAndDelete(req.params.ID).exec().then((orderinfo)=>{
+router.delete("/Delete-order-by-id/:id", (req, res)=>{
+  OrderDB.findByIdAndDelete(req.params.id).exec().then((orderinfo)=>{
     res.json(orderinfo);
   }).catch((err)=>{
     res.json(err);
